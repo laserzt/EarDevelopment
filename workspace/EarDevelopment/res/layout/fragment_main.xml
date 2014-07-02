@@ -1,0 +1,46 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:launchMode="singleInstance"
+    tools:context="com.eardevelopment.MainActivity$PlaceholderFragment" >
+	<TableRow
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+		<ImageButton
+	    	android:id="@+id/button_single_note_id"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:onClick="StartSingle" />
+		<ImageButton
+	    	android:id="@+id/button_piano_roll_id"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:onClick="PianoRoll" />
+    </TableRow>
+	<TableRow
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+		<ImageButton
+	    	android:id="@+id/button_dual_note_id"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:onClick="StartDual" />
+		<ImageButton
+	    	android:id="@+id/button_chords_id"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:onClick="StartChords" />
+    </TableRow>
+	<TableRow
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+		<ImageButton
+	    	android:id="@+id/button_settings_id"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:onClick="Settings" />
+    </TableRow>
+</TableLayout>

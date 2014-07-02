@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_layout"
+    android:launchMode="singleTop"
+    tools:context="com.eardevelopment.Settings$PlaceholderFragment" >
+	<ScrollView
+    	android:layout_width="wrap_content"
+   		android:layout_height="wrap_content" >
+		<RelativeLayout
+	    	android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+			android:id="@+id/settings_checkboxes_layout">
+		</RelativeLayout>		
+	</ScrollView>
+	<RadioGroup android:id="@+id/radio_group_settings_type"
+    	android:layout_alignParentTop="true"    			
+    	android:layout_alignParentRight="true"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    		<RadioButton android:id="@+id/radio_button_single_note_settings"
+	        	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Single Note Settings" />
+    		<RadioButton android:id="@+id/radio_button_interval_settings"
+	        	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Interval Settings" />
+    		<RadioButton android:id="@+id/radio_button_chord_settings"
+	        	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Chord Settings" />
+	</RadioGroup>
+	<RadioGroup android:id="@+id/radio_group_tuning"
+    	android:layout_below="@id/radio_group_settings_type"
+    	android:layout_alignLeft="@id/radio_group_settings_type"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    		<RadioButton android:id="@+id/radio_button_Concert"
+	        	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+              	android:text="Concert Instrument" />
+            <RadioButton android:id="@+id/radio_button_Bb"
+		        android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Bb Instrument" />
+    		<RadioButton android:id="@+id/radio_button_Eb"
+	        	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Eb Instrument" />
+	</RadioGroup>	
+	<CheckBox
+    	android:id="@+id/checkboxOneOctave"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_tuning"
+        android:layout_alignLeft="@id/radio_group_settings_type"
+        android:text="Only One Octave" />
+	<CheckBox
+    	android:id="@+id/checkboxEurope"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxOneOctave"
+        android:layout_alignLeft="@id/radio_group_settings_type"
+        android:text="European note names" />
+    <TextView
+    	android:id="@+id/textNotesnum"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:layout_alignLeft="@id/radio_group_settings_type"
+    	android:layout_below="@id/checkboxEurope"
+    	android:text="Number of\nnotes in piano: " />
+    <EditText
+    	android:id="@+id/edittextNotesnum"
+    	android:inputType="number"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:layout_below="@id/checkboxEurope"
+   		android:layout_toRightOf="@id/textNotesnum" 
+		android:text="14" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			xmlns:tools="http://schemas.android.com/tools"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:orientation="vertical"
+	    	android:id="@+id/interval_practive_layout" 
+	    	tools:context="com.eardevelopment.IntervalPractice$PlaceholderFragment" >
+	<ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+		<LinearLayout 
+	    	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" 
+    		android:orientation="vertical"
+    		android:id="@+id/interval_main_layout">
+			<TextView
+	            android:id="@+id/text_interval_RightOrWrong"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:text=" " />		  	
+			<LinearLayout
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="horizontal" >
+				<RelativeLayout android:layout_weight="1"
+	    			android:layout_width="0dp"
+	    			android:layout_height="wrap_content"
+	    			android:id="@+id/interval_button_layout_left"/>					
+	    		<RelativeLayout android:layout_weight="1"
+	    			android:layout_width="0dp"	
+	    			android:layout_height="wrap_content"
+	    			android:id="@+id/interval_button_layout_right" />
+			</LinearLayout>
+    		<Button
+    			android:id="@+id/button_interval_replay"
+    			android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+    			android:text="@string/button_replay"
+    			android:onClick="replayLastNote" />    			
+			<LinearLayout 
+		    	android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" 
+    			android:orientation="horizontal">
+    			<Button
+    				android:id="@+id/button_interval_replay_lower"
+    				android:layout_width="0dp"
+    				android:layout_weight="1"
+					android:layout_height="wrap_content"
+    				android:text="Play Lower Note"
+    				android:onClick="replayLower" />    			
+    			<Button
+    				android:id="@+id/button_interval_replay_upper"
+    				android:layout_width="0dp"
+    				android:layout_weight="1"
+					android:layout_height="wrap_content"
+    				android:text="Play Upper Note"
+    				android:onClick="replayUpper" />    			
+    		</LinearLayout>
+    		<TextView
+    			android:id="@+id/text_interval_score"
+    			android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />				
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>		

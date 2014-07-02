@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			xmlns:tools="http://schemas.android.com/tools"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:orientation="vertical"
+	    	android:id="@+id/chord_practive_layout"	    	
+			tools:context="com.eardevelopment.ChordPractice$PlaceholderFragment" >
+	<ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+		<LinearLayout 
+	    	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" 
+    		android:id="@+id/chord_main_layout"
+    		android:orientation="vertical">
+			<TextView
+	            android:id="@+id/text_chord_RightOrWrong"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"/>		  	
+			<LinearLayout
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="horizontal"
+	    		android:baselineAligned="false">
+				<RelativeLayout android:layout_weight="1"
+	    			android:layout_width="0dp"
+	    			android:layout_height="wrap_content"
+	    			android:id="@+id/chord_button_layout_left"/>					
+	    		<RelativeLayout android:layout_weight="1"
+	    			android:layout_width="0dp"	
+	    			android:layout_height="wrap_content"
+	    			android:id="@+id/chord_button_layout_right" />
+			</LinearLayout>
+    		<Button
+    			android:id="@+id/button_chord_replay"
+    			android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+    			android:text="@string/button_replay"
+    			android:onClick="replayLastNote" />    			
+			<LinearLayout 
+		    	android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" 
+    			android:orientation="horizontal"
+    			android:id="@+id/button_chord_replay_buttons">
+    		</LinearLayout>
+    		<TextView
+    			android:id="@+id/text_chord_score"
+    			android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />				
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>		

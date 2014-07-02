@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			xmlns:tools="http://schemas.android.com/tools"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:orientation="vertical"
+	    	android:id="@+id/single_note_practive_layout" 
+	    	tools:context="com.eardevelopment.SingleNotePractice$PlaceholderFragment" >>
+	<ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+		<LinearLayout 
+	    	android:layout_width="fill_parent"
+    		android:layout_height="fill_parent" 
+    		android:orientation="vertical"
+    		android:id="@+id/single_note_main_layout">
+			<TextView
+	            android:id="@+id/text_RightOrWrong"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:text=" " />		  	
+			<LinearLayout
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="horizontal" >
+				<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    		xmlns:tools="http://schemas.android.com/tools"
+	    			android:layout_weight="1"
+	    			android:layout_width="0dp"
+	    			android:layout_height="wrap_content"
+	    			android:layout_alignParentLeft="true"
+	    			android:id="@+id/button_layout_left"
+	    			tools:context="com.eardevelopment.SingleNotePractice$PlaceholderFragment" />					
+	    		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    		xmlns:tools="http://schemas.android.com/tools"
+	    			android:layout_weight="1"
+	    			android:layout_width="0dp"	
+	    			android:layout_height="wrap_content"
+	    			android:layout_alignParentRight="true"
+	    			android:id="@+id/button_layout_right"
+	    			tools:context="com.eardevelopment.SingleNotePractice$PlaceholderFragment" />
+			</LinearLayout>
+    		<Button
+    			android:id="@+id/button_replay"
+    			android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+    			android:text="@string/button_replay"
+    			android:onClick="replayLastNote" />    			
+    		<TextView
+    			android:id="@+id/text_score"
+    			android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />				
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>		
